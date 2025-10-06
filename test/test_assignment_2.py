@@ -1,9 +1,10 @@
 import unittest
 
 from assignment_2.task_1 import interval_count
+from assignment_2.task_2 import analyze_trimpazation
 
 
-class TestTask2(unittest.TestCase):
+class Test_Task1(unittest.TestCase):
     def test_basic(self):
         self.assertEqual(interval_count([1, 3, 5, 7, 9], 2, 6), 2)
         self.assertEqual(interval_count([1, 3, 5, 7, 9], 3, 3), 1)
@@ -25,3 +26,10 @@ class TestTask2(unittest.TestCase):
         self.assertEqual(interval_count([100], 100, 100), 1)
         self.assertEqual(interval_count([100], 99, 100), 1)
         self.assertEqual(interval_count([100], 101, 200), 0)
+
+
+class Test_Task2(unittest.TestCase):
+    def test_basic(self):
+        self.assertEqual(analyze_trimpazation(3, 5, 1), 5)
+        self.assertEqual(analyze_trimpazation(5, 10, 7), 29)
+        self.assertEqual(analyze_trimpazation(10000000, 10000, 1), 83287854395709985)
