@@ -20,14 +20,15 @@ def insertion_sort(arr):
         arr[j + 1] = key
 
 
-students = []
-students_count = int(input())
-for _ in range(students_count):
-    data = input().split()
-    students.append(Student(int(data[0]), int(data[1]), data[2]))
+if __name__ == "__main__":
+    students = []
+    students_count = int(input())
+    for _ in range(students_count):
+        data = input().split()
+        students.append(Student(int(data[0]), int(data[1]), data[2]))
 
-insertion_sort(students)
-for i in range(3):
-    print(students[i].name)
+    insertion_sort(students)
+    for i in range(3):
+        print(students[i].name)
 
-print(' '.join([str(student.id) for student in students]))
+    print(" ".join([str(student.id) for student in students]))
