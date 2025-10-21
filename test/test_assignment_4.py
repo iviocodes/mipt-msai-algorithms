@@ -1,0 +1,10 @@
+import unittest
+
+from assignment_4.task_2 import min_length
+
+
+class Test_Task2(unittest.TestCase):
+    def test_basic(self):
+        self.assertEqual(min_length(3, [1, 2, 3]), 2)
+        self.assertEqual(min_length(4, [11, 1, 2, 3]), 9)
+        self.assertEqual(min_length(5, [0, 2, 10, 1, 12]), 4)
