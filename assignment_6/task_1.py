@@ -38,7 +38,7 @@ class MaxHeap:
             self.heap[i], self.heap[child_min] = self.heap[child_min], self.heap[i]
             self._sift_down(child_min)
 
-def main():
+if __name__ == "__main__":
     n = int(input())
     heap = MaxHeap()
     time_counter = 0
@@ -53,6 +53,3 @@ def main():
         else:
             _, _, id = heap.pop()
             print(id)
-
-if __name__ == "__main__":
-    main()
