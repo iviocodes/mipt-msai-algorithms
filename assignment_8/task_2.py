@@ -25,6 +25,7 @@ def bfs_min_cost(n, s, f, k, matrix):
     ans = min(min_cost[f][1 : k + 1])
     return ans if ans < INF else -1
 
+
 if __name__ == "__main__":
     n, s, f, k = map(int, input().split())
     matrix = []
